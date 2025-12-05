@@ -5,6 +5,7 @@ const express = require('express');
 const { sequelize } = require('../models');
 // 1. IMPORTAMOS NUESTRAS RUTAS
 const usuarioRoutes = require('./routes/usuario.routes');
+const reparacionesRouter = require('./routes/reparaciones.routes')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,6 +27,8 @@ app.get('/api', (req, res) => {
 // Ejemplo: La ruta GET '/' en usuario.routes.js se convierte en GET '/api/usuarios'.
 // La ruta GET '/:id' se convierte en GET '/api/usuarios/:id'.
 app.use('/api/usuarios', usuarioRoutes);
+app.use('/api/usuarios/reparaciones', reparacionesRouter);
+
 
 
 // 4. INICIAR EL SERVIDOR

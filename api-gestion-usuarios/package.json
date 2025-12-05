@@ -1,11 +1,12 @@
 {
   "name": "api-gestion-usuarios",
   "version": "1.0.0",
-"main": "src/index.js",
-"scripts": {
-  "dev": "nodemon src/index.js",
-  "db:migrate": "npx sequelize-cli db:migrate"
-},
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "db:migrate": "npx sequelize-cli db:migrate"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
