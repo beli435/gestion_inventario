@@ -27,7 +27,7 @@ app.get('/api', (req, res) => {
 // Ejemplo: La ruta GET '/' en usuario.routes.js se convierte en GET '/api/usuarios'.
 // La ruta GET '/:id' se convierte en GET '/api/usuarios/:id'.
 app.use('/api/usuarios', usuarioRoutes);
-app.use('/api/usuarios/reparaciones', reparacionesRouter);
+app.use('/api/reparaciones', reparacionesRouter);
 
 
 
