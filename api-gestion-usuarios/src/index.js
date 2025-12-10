@@ -31,6 +31,8 @@ app.use('/api/reparaciones', reparacionesRouter);
 
 
 
+
+
 // 4. INICIAR EL SERVIDOR
 app.listen(PORT, async () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
