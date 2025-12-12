@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Proveedor.init({
     nombre: DataTypes.STRING,
-    contacto: DataTypes.STRING,
+    marca: DataTypes.STRING,
+    cantidad: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Proveedor',

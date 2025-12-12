@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   HistorialEstado.init({
     estado: DataTypes.STRING,
-    fecha: DataTypes.DATE,
+    nombre: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'HistorialEstado',
