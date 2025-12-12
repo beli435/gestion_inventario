@@ -7,7 +7,7 @@ const {
   getCategoriaById,
   updateCategoria,
   deleteCategoria,
-} = require('../controllers/categoria.controller');
+} = require('../controllers/categorias.controller');
 
 const router = Router();
 

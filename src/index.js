@@ -1,11 +1,18 @@
+
 // Archivo: src/index.js
 require('dotenv').config();
+// Las variables de entorno ya están disponibles aquí
+const historialEstadosRouter = require('./routes/historial_estados.routes');
+const proveedoresRouter = require('./routes/proveedores.routes');
+const ubicacionesRouter = require('./routes/ubicaciones.routes');
+const categoriasRouter = require('./routes/categorias.routes');
 
 const express = require('express');
 const { sequelize } = require('../models');
 // 1. IMPORTAMOS NUESTRAS RUTAS
 const usuarioRoutes = require('./routes/usuario.routes');
 const reparacionesRouter = require('./routes/reparaciones.routes')
+const productosRouter = require('./routes/productos.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,7 +35,11 @@ app.get('/api', (req, res) => {
 // La ruta GET '/:id' se convierte en GET '/api/usuarios/:id'.
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/reparaciones', reparacionesRouter);
-
+app.use('/api/productos', productosRouter);
+app.use('/api/categorias', categoriasRouter);
+app.use('/api/historial_estados', historialEstadosRouter);
+app.use('/api/proveedores', proveedoresRouter);
+app.use('/api/ubicaciones', ubicacionesRouter);
 
 
 

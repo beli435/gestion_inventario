@@ -1,18 +1,19 @@
 const { Router } = require('express');
+
 const {
-  createHistorialEstado,
-  getAllHistorialEstados,
-  getHistorialEstadoById,
-  updateHistorialEstado,
-  deleteHistorialEstado,
+  createHistorial,
+  getAllHistorial,
+  getHistorialById,
+  updateHistorial,
+  deleteHistorial,
 } = require('../controllers/historial_estados.controller');
 
 const router = Router();
 
-router.post('/', createHistorialEstado);
-router.get('/', getAllHistorialEstados);
-router.get('/:id', getHistorialEstadoById);
-router.put('/:id', updateHistorialEstado);
-router.delete('/:id', deleteHistorialEstado);
+router.post('/', createHistorial);
+router.get('/', getAllHistorial);
+router.get('/:id', getHistorialById);
+router.put('/:id', updateHistorial);
+router.delete('/:id', deleteHistorial);
 
 module.exports = router;
